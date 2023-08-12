@@ -1,3 +1,3 @@
-# Git and GitHub
+# Git Guide
 
-Welcome to this journey!
+Your journey into Git and GitHub with ACM's **Git Guide**. Progressing Together, a few *GITS* at a time.

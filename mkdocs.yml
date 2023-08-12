@@ -1,4 +1,4 @@
-site_name: Git and GitHub
+site_name: Git Guide
 remote_branch: gh-pages
 
 theme:
@@ -55,8 +55,3 @@ markdown_extensions:
 
 plugins:
   - search
-  - mkdocs-jupyter:
-      include_source: True
-  
-
-edit_uri: ""
