@@ -2,7 +2,7 @@
 
 This repository contains resources for all things Git and GitHub. It is meant for beginners who want to get started with Open Source, Version Control, Contributing and so much more!
 
-The content is hosted online at url-placeholder. In this repository, all the content is present on the [docs](docs/) directory as markdown files.
+The content is hosted online at [GitGuide.acmbpdc.org](gitguide.acmbpdc.org). In this repository, all the content is present on the [docs](docs/) directory as markdown files.
 
 
 ## 📝 Contributing
