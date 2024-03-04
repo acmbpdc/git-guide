@@ -48,10 +48,11 @@ extra:
 
 nav:
   - Home: index.md
+  - Git & GitHub Workshop: workshop.md
 
 markdown_extensions:
   - toc:
-      permalink: True 
+      permalink: True
 
 plugins:
   - search
