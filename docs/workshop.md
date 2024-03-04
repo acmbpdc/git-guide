@@ -112,8 +112,8 @@ Files inside a `git` repository are of two types:
 - **Tracked**: These files are the ones' that git is already keeping track of. These files could either be:
 
     - **modified**: This means that we have made changes into the tracked file, but it has not yet been staged or commited. Git won't notice these files until we *stage* these files. Note that even if you had used `git add` on this file earlier, it will return to the modified state if you make changes to it.
-    - **staged/tracked**: These are *modified* files which are ready to be commited (*added into the next snapshot of the repository*). 
-    - **commited**: The changes of these files are stored into the `git` repsoitory, after the snapshot is taken.
+    - **staged/tracked**: These are *modified* files which are ready to be committed (*added into the next snapshot of the repository*). 
+    - **committed**: The changes of these files are stored into the `git` repository, after the snapshot is taken.
 
 To understand the current file tracking statuses use
 
@@ -121,7 +121,7 @@ To understand the current file tracking statuses use
 git status
 ```
 
-Git status is a very useful command to understand what is happening in your repository. It will tell you what files are untracked, modified, staged, and commited. As well as give you suggestions on commands that you can use.
+Git status is a very useful command to understand what is happening in your repository. It will tell you what files are untracked, modified, staged, and committed. As well as give you suggestions on commands that you can use.
 
 ### `restore`
 
@@ -131,7 +131,7 @@ To remove files or directories from the staging area, use the `restore` command.
 git restore --staged file1
 ```
 
-You can also `restore` command to discard all the **unstaged** local changes made to your files in your repository. This will bring the file back to the last commited state.
+You can also `restore` command to discard all the **unstaged** local changes made to your files in your repository. This will bring the file back to the last committed state.
 
 ```sh
 git restore .
@@ -457,9 +457,9 @@ A quick reference for working with distributed repositories.
 
 - Always synchronize your branches before starting any work on your own.
 - Avoid having very large changes that modify a lot of different things.
-- When working on a big change, it makes sense to have a seperate feature branch.
+- When working on a big change, it makes sense to have a separate feature branch.
 - Regularly merge changes made on the main branch back onto the feature branch.
-- Have the latest version of the project in the main branch, and the stable version of the project on a seperate branch.
+- Have the latest version of the project in the main branch, and the stable version of the project on a separate branch.
 - Having good commit message is important.
 
 ## GitHub Student Developer Pack
@@ -470,7 +470,7 @@ A quick reference for working with distributed repositories.
 
 There's no substitute for hands-on experience. But for most students, real world tools can be cost-prohibitive. That's why GitHub created the [GitHub Student Developer Pack.](https://gh.io/acm-pilani)
 
-There are a few steps we need to complete before we can apply for the pack. Follow the links below and complete the steps to access 100's of amazing resources and tools for free including GitHub Pro, GitHub CoPilot AI, AWS, Azure credits, free domains, several free trials and so much more! As an added benfit grab an extra sticker for applying for the pack!
+There are a few steps we need to complete before we can apply for the pack. Follow the links below and complete the steps to access 100's of amazing resources and tools for free including GitHub Pro, GitHub CoPilot AI, AWS, Azure credits, free domains, several free trials and so much more! As an added benefit grab an extra sticker for applying for the pack!
 
 - [Update your location information, ensure you press save](https://github.com/settings/billing/payment_information)
 - [Ensure your college mail has been verified](https://github.com/settings/emails)
