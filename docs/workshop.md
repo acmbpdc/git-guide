@@ -3,7 +3,7 @@
 <center>
 This is the documentation for a workshop supported by 
 
-<a href="https://education.github.com/experts"><img src="/assets/gce_bg.jpg" style="display:block; height:30px;"></img></a>
+<a href="https://education.github.com/experts"><img src="/assets/workshop/gce_bg.jpg" style="display:block; height:30px;"></img></a>
 
 [GCE](https://education.github.com/experts) is a global program by GitHub that looks to serve communities around the globe and support their student leaders. This session has been funded by GitHub so enjoy the pizzas, stickers and fun session!
 </center>
@@ -23,8 +23,8 @@ Let's say you are working on completing your Math-II Assignment, which requires 
 Now you are writing the report for this project, the same situation arises, but this time you can use Google Docs' version history feature to go back in time and get your report back. This is a great example of version control.
 
 <center>
-<img src="/assets/without-vcs.PNG" style="width:45%"></img>
-<img src="/assets/gdocs.png" style="width:45%"></img>
+<img src="/assets/workshop/without-vcs.png" style="width:45%"></img>
+<img src="/assets/workshop/gdocs.png" style="width:45%"></img>
 </center>
 
 ## So what is GitHub?
@@ -39,7 +39,7 @@ If you are using your local machine you can follow the instructions on [this pag
 
 GitHub offers free access to a computer on the cloud, a feature known as GitHub codespaces. This is a great way to get started with coding and GitHub without having to install anything on your local machine. [You can access it by clicking on the `.` button on the top right of the repository and selecting `Codespaces`](https://github.com/codespaces).
 
-You will need to have or create a GitHub account to use GitHub Codespaces. If you don't have one, you can create one [here](https://github.com/signup).
+You will need to have or create a GitHub account to use GitHub Codespaces. If you don't have one, you can create one [here](https://github.com/signup). Please use your college email which will be useful for next steps.
 
 Thanks to codespaces we will skip a lot of setup steps and get straight to the cool stuff. If you are referring this documentation later and need to setup git on your personal computers you can [refer this](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git).
 
@@ -50,13 +50,13 @@ A repository is a place where you can store your code. It is simply the equivale
 <center>
 [Create a new repository](https://github.com/new)
 
-<img src="/assets/newrepo.png" style="width:45%"></img>
+<img src="/assets/workshop/newrepo.png" style="width:45%"></img>
 </center>
 
 Now if you return to codespaces you can [create a new codespace](https://github.com/codespaces/new).
 
 <center>
-<img src="/assets/newcodespace.png" style="width:45%"></img>
+<img src="/assets/workshop/newcodespace.png" style="width:45%"></img>
 </center>
 
 And that's it! You are ready to start experimenting. This interface is a web version of the popular IDE (Integrated Development Environment) Visual Studio Code. You can write code, run it, and do everything you would do on your local machine. And since it is integrated by GitHub, there is no need for extra logins or authentication.
@@ -212,7 +212,7 @@ You might probably choose the second option. That is where *branches* come in!
 **Branching** allows you to create a copy (*branch*) of your current working directory, and make changes (*commits*) to this copy, without disturbing anything else.
 
 <div align="center">
-    <img src="/assets/git-branch.PNG">
+    <img src="/assets/workshop/git-branch.png">
 </div>
 </br>
 
@@ -257,7 +257,7 @@ git merge from_which_branch_to_merge_from
 ```
 
 <div align="center">
-    <img src="/assets/git-merge.PNG">
+    <img src="/assets/workshop/git-merge.png">
 </div>
 </br>
 
@@ -362,12 +362,12 @@ GitHub is like the kitchen where you share your recipe (code) with others. Peopl
 
 So, in simple terms, open source on GitHub means sharing your code with others, collaborating together, and making cool stuff for everyone to enjoy! 🚀
 
-### Forking
+### Forks
 
 A way of creating a copy of a given repository, so that it belongs to our user. This let's you work on a copy of any code that you see on *GitHub*. 
 
 <div align="center">
-    <img src="/assets/fork.png">
+    <img src="/assets/workshop/fork.png">
 </div>
 </br>
 
@@ -379,30 +379,43 @@ A commit or series of commits that you send to the owner of a repository, so tha
 
 *Win a sticker for your first contribution! IRL and on your profile!*
 
-**Step 1**: Create a fork of the [repository we setup for you to learn](https://github.com/acmbpdc/learning-open-source).
+- **Step 1**
+<br>Create a fork of the [repository we setup for you to learn](https://github.com/acmbpdc/learning-open-source).
 
-**Step 2**: Open the forked repository in GitHub codespaces. *If you have your own laptops you should `git clone`*. You can find your fork on your GitHub profile, repositories tab: https://github.com/{YOUR USERNAME HERE}?tab=repositories. Open the forked repository and press the `.` button to open in codespaces. Alternatively you can open a [new codespaces instance](https://github.com/codespaces/new) and select the forked repository.
+- **Step 2**
+<br>Open the forked repository in GitHub codespaces. You can find your fork on your GitHub profile, repositories tab: https://github.com/{YOUR USERNAME HERE}?tab=repositories. Open the forked repository and press the `.` button to open in codespaces. Alternatively you can open a [new codespaces instance](https://github.com/codespaces/new) and select the forked repository.
+<details><summary>For local machines</summary><pre>If you have your own laptops you should `git clone` and work on the repository locally.</pre></details>
 
-**Step 3:** Follow the steps given in the README, create and checkout a new branch in your clone to start working on the code you want to add.
+- **Step 3**
+<br>Follow the steps given in the README, create and checkout a new branch in your clone to start working on the code you want to add.
 
-**Step 4:** Make all the changes you should into that branch.
+- **Step 4** 
+<br>Make all the changes you should into that branch.
 
-**Step 5:** Once done making changes, commit the changes.
+- **Step 5** 
+<br>Once done making changes, commit the changes.
 
-**Step 6:** Once all the commits are made, you can now `push` the changes into your fork, in the remote.
+- **Step 6** 
+<br>Once all the commits are made, you can now `push` the changes into your fork, in the remote.
 
-**Step 7:** You can now create a pull request from your fork, on your remote (*GitHub*), onto the actual repository. Open the fork on GitHub and click on the `Pull Requests` tab and then `New Pull Request`. You may also use the prompt on screen:
-- Click on `Compare & pull request`.
-- Create a pull request.
-- Once the maintainer of the repository reviews your code, they'll merge your code into their repository.
+- **Step 7** 
+<br>You can now create a pull request from your fork, on your remote (*GitHub*), onto the actual repository. Open the fork on GitHub and click on the `Pull Requests` tab and then `New Pull Request`. You may also use the prompt on screen:
+
+    - Click on `Compare & pull request`.
+    - Create a pull request.
+    - Once the maintainer of the repository reviews your code, they'll merge your code into their repository.
+
+---
 
 **YAY!** *You just made your first contribution!* 🎉
 
-This was a simple example. But doing it yourself prepares you to contribute to any open source project on GitHub. You can [explore repositories on GitHub](https://github.com/trending) and contribute to any that interest you. We welcome contributions to any of our open source documentation projects - [Openlib.cs](https://github.com/acmbpdc/openlib.cs), [Truffle](https://github.com/acmbpdc/Truffle)
+This was a simple example. But doing it yourself prepares you to contribute to any open source project on GitHub. You can [explore repositories on GitHub](https://github.com/trending) and contribute to any that interest you. We welcome contributions to any of our open source documentation projects: [Openlib.cs](https://github.com/acmbpdc/openlib.cs), [Truffle](https://github.com/acmbpdc/Truffle).
+
+We have some helpful tips and workflows below for your reference.
 
 ## Git Workflow
 
-Find below a quick way to get started with basic git.
+A quick way to get started with basic git.
 
 **Step 1**: You start off by creating a git repository (`init`).
 
@@ -414,13 +427,31 @@ Find below a quick way to get started with basic git.
 
 **Step 5**: If you have new changes to make into your repository, continue the workflow from *step 2*.
 
-## Best Practices for Git
+### Best Practices for Git
 
 - **Don't make small commits**: You really don't have to make a commit every time you make a change in a file. 
 - **Don't make huge commits**: Rather than commiting the entire project at once, it's the best to commit every time you hit a checkpoint (**eg:** *Implements a function for your OOPs Project*)
 - **Write Proper Commit Messages**: When writing a commit message, make sure to write meaningful commit messages (*rather than just* "Update file1")
 
-## Best Practices for Collaboration
+## Contribution Workflow
+
+A quick reference for working with distributed repositories.
+
+**Step 1**: Create a fork of the repository that you want to work on.
+
+**Step 2**: Clone the fork into your local system.
+
+**Step 3:** You could create a new branch in your clone to start working on the code you want to add.
+
+**Step 4:** Make all the changes you want into that branch.
+
+**Step 5:** Once done making changes, commit the changes.
+
+**Step 6:** Once all the commits are made, you can now `push` the changes into your fork, in the remote.
+
+**Step 7:** You can now create a pull request from your fork, on your remote (*GitHub*), onto the actual repository.
+
+### Best Practices for Contribution/Collaboration
 
 - Always synchronize your branches before starting any work on your own.
 - Avoid having very large changes that modify a lot of different things.
@@ -429,3 +460,40 @@ Find below a quick way to get started with basic git.
 - Have the latest version of the project in the main branch, and the stable version of the project on a seperate branch.
 - Having good commit message is important.
 
+## GitHub Student Developer Pack
+
+<center>
+<img src="/assets/workshop/backpack.png" style="width:45%">
+</center>
+
+There's no substitute for hands-on experience. But for most students, real world tools can be cost-prohibitive. That's why GitHub created the [GitHub Student Developer Pack.](https://gh.io/acm-pilani)
+
+There are a few steps we need to complete before we can apply for the pack. Follow the links below and complete the steps to access 100's of amazing resources and tools for free including GitHub Pro, GitHub CoPilot AI, AWS, Azure credits, free domains, several free trials and so much more! As an added benfit grab an extra sticker for applying for the pack!
+
+- [Update your location information, ensure you press save](https://github.com/settings/billing/payment_information)
+- [Ensure your college mail has been verified](https://github.com/settings/emails)
+- [Enable 2FA and activate it](https://github.com/settings/security)
+- [Customise your GitHub profile](https://github.com/settings/profile)
+- [Add a profile README, you should see a prompt for the same](https://github.com)
+
+<img src="/assets/workshop/rme.png"></img>
+
+<details><summary>If you don't see the highlighted prompt</summary>
+<pre>
+- Go to [New Repository](https://github.com/new)
+- Set the repository name same as your username (you will see a message telling you this is a special repository)
+- Add a README file
+Enter the following in the file:
+```md
+- 👋 Hi, I’m @USERNAME
+- 👀 I’m interested in ...
+- 🌱 I’m currently learning ...
+- 💞️ I’m looking to collaborate on ...
+- 📫 How to reach me ...
+- 😄 Pronouns: ...
+- ⚡ Fun fact: ...
+```
+</pre>
+</details>
+
+Use this referral link to get access quickly! [https://gh.io/acm-pilani](https://gh.io/acm-pilani). And start enjoying the benefits!
