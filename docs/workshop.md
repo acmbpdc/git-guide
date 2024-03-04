@@ -12,9 +12,9 @@ This is the documentation for a workshop supported by
 
 To define it technically, Git is a version control system created by Linus Torvalds in 2005 for development of the Linux kernel. Git is distributed, every directory on every computer has a working copy of the code with a complete history of changes and full version tracking capabilities.
 
-To define it in a more fun way, Git is a time machine! It allows you to go back in time and see what your code looked like at a certain point in time. It also allows you to collaborate with others and work on the same codebase without stepping on each other's toes.
+To define it in a more fun way, Git is a multidimensional time machine! It allows you to go back in time and see what your code looked like at a certain point in time. It also allows you to collaborate with others and work on the same codebase without stepping on each other's toes.
 
-But what is version control
+But what is version control?
 
 ### Version Control
 
@@ -29,15 +29,15 @@ Now you are writing the report for this project, the same situation arises, but 
 
 ## So what is GitHub?
 
-Git is to GitHub like a car is to car parking, a video is to YouTube, a photo is to Instagram. GitHub is simply a platform built on top of Git, which allows you to store your code in the cloud, collaborate with others, and track changes to your code.
+Git is to GitHub like a car is to car parking, a video is to YouTube, a photo is to Instagram. GitHub is simply a platform built to store Git repositories (folders), which allows you to store your code in the cloud, collaborate with others, and track changes to your code.
 
-Over the years GitHub has become synonymous with developers, with so many new features added in, GitHub goes beyond simply hosting Git repositories. It has several collaboration features, codespaces (Virtual Machines), web hosting, and much more.
+Over the years GitHub has become synonymous with developers, with so many new features added in, GitHub goes beyond simply hosting Git repositories. It has several other features such as collaboration, codespaces (Virtual Machines), web hosting, and much more.
 
 ## Getting Started
 
 If you are using your local machine you can follow the instructions on [this page](https://git-scm.com/downloads) to install git. There are a few more steps to get your account details setup, but for today we are going to use GitHub's web interface to get started.
 
-GitHub offers free access to a computer on the cloud, a feature known as GitHub codespaces. This is a great way to get started with coding and GitHub without having to install anything on your local machine. [You can access it by clicking on the `.` button on the top right of the repository and selecting `Codespaces`](https://github.com/codespaces).
+GitHub offers free access to a computer on the cloud, a feature known as GitHub codespaces. This is a great way to get started with coding and GitHub without having to install anything on your local machine. You can access it by clicking on the `.` key on any repository or selecting `Codespaces` on GitHub.
 
 You will need to have or create a GitHub account to use GitHub Codespaces. If you don't have one, you can create one [here](https://github.com/signup). Please use your college email which will be useful for next steps.
 
@@ -66,9 +66,9 @@ And that's it! You are ready to start experimenting. This interface is a web ver
 **YOU DO NOT NEED A GITHUB ACCOUNT TO USE GIT!**
 </center>
 
-This is a common misconception. You can use git on your local machine without ever needing to create a GitHub account. However, if you want to collaborate with others, or store your code on GitHub, you will need a GitHub account. In our case, we are using GitHub's virtual machines so we want to use GitHub. 
+This is a common misconception. You can use git on your local machine without ever needing to create a GitHub account. However, if you want to collaborate with others, or store your code on GitHub, you will need a GitHub account. In our case, we are using GitHub's virtual machines (borrowing their laptop on your browser) so we want to use GitHub. 
 
-You can now make use of the terminal on the bottom of the screen to work with git.
+You can now make use of the terminal on the bottom of the screen to work with git. You can navigate, create and edit files, folder by clicking on the directory on the left.
 
 ## The Basics
 
@@ -80,9 +80,9 @@ To make any directory into a git repository, use the `init` command.
 git init
 ```
 
-You might see the `Reinitialized existing Git repository` message, this simply means that this folder is already a git repository. When we create a repository on GitHub it is already git init-ed.
+You might see the `Reinitialized existing Git repository` message, this simply means that this folder is already a git repository. When we create a repository on GitHub it is already git *init-ed*.
 
-If you view hidden files, you can see a new directory called `.git` created. This is where git stores all the information that git needs to track your project (*you really don't have to know what any of the things inside this directory does, to use git*). 
+If you view hidden files, you can see a new folder called `.git` created. This is where git stores all the information that git needs to track your project (*you really don't have to know what any of the things inside this directory does, to use git*). 
 
 ### `add`
 
@@ -182,7 +182,7 @@ git log
 You would be seeing an output as shown below
 
 ```sh
-commit 227fbdb4ef3a05b2df0dfdc4fbea61e2d13af044 (HEAD -> master)
+commit 227fbdb4ef3a05b2df0dfdc4fbea61e2d13af044 (HEAD -> main)
 Author: The Real Thanos <thanos.cool@email.com>
 Date:   Thu Nov 25 00:11:14 2021 +0400
 
@@ -216,7 +216,7 @@ You might probably choose the second option. That is where *branches* come in!
 </div>
 </br>
 
-The *default* branch that git creates for you, when a new repository is created (`init`) is called **master**.
+The *default* branch that git creates for you, when a new repository is created (`init`) is called **main**.
 
 To **see all the branches** in your repository, use the `branch` command
 
@@ -271,6 +271,8 @@ A conflict occurs when the changes made occur on the same line, as Git won't be 
 
 You can make use of GUI features inbuilt to VSCode and other editors to help resolve these.
 
+There are a lot more awesome commands and features in Git, you can refer the basics on your cheatsheet. Find great [resources attached](#resources).
+
 ### Remotes
 
 A remote repository in Git, also called a remote, is a Git repository that’s hosted on the Internet or another network. (*It's basically like how you could host your pictures or folders on Google Drive*)
@@ -294,9 +296,9 @@ git config --global credential.helper store
 #### Adding Remotes to Git Repo
 
 <details><summary>For Local Machines</summary><pre>
-To add a remote to repository you have in your local system, use the `remote` command. 
+To add a remote to a repository that you have in your local system, use the `remote` command. 
 You can get the remote url from GitHub itself by clicking on the `Code` button and copying the url.
-When you create a blank repository on GitHub you will get a list of initiation commands, you can refer those to get started locally.
+When you create a blank repository on GitHub you will get a list of initiation commands, you can use those to get started locally.
 
 ```sh
 git remote add origin {remote_url}
@@ -358,7 +360,7 @@ git pull origin main
 
 Imagine you're baking a cake with your friends. Open source is like sharing your cake recipe with everyone and inviting them to help bake it together. 🎂
 
-GitHub is like the kitchen where you share your recipe (code) with others. People can see your recipe, suggest improvements, or even bake their own version of the cake! 🍰
+GitHub is where you share your recipe (code) with others. People can see your recipe, suggest improvements, or even bake their own version of the cake! 🍰
 
 So, in simple terms, open source on GitHub means sharing your code with others, collaborating together, and making cool stuff for everyone to enjoy! 🚀
 
@@ -390,16 +392,16 @@ A commit or series of commits that you send to the owner of a repository, so tha
 <br>Follow the steps given in the README, create and checkout a new branch in your clone to start working on the code you want to add.
 
 - **Step 4** 
-<br>Make all the changes you should into that branch.
+<br>Add the file into that branch naming it with the format provided.
 
 - **Step 5** 
-<br>Once done making changes, commit the changes.
+<br>Once done making changes, add and commit the changes.
 
 - **Step 6** 
-<br>Once all the commits are made, you can now `push` the changes into your fork, in the remote.
+<br>Once all the commits are made, you can now `push` the changes to your fork, in the remote.
 
 - **Step 7** 
-<br>You can now create a pull request from your fork, on your remote (*GitHub*), onto the actual repository. Open the fork on GitHub and click on the `Pull Requests` tab and then `New Pull Request`. You may also use the prompt on screen:
+<br>You can now create a pull request from your fork, on your remote (*GitHub*), onto the actual repository. Open the fork url on GitHub and click on the `Pull Requests` tab and then `New Pull Request`. You may also use the prompt on screen:
 
     - Click on `Compare & pull request`.
     - Create a pull request.
@@ -409,7 +411,7 @@ A commit or series of commits that you send to the owner of a repository, so tha
 
 **YAY!** *You just made your first contribution!* 🎉
 
-This was a simple example. But doing it yourself prepares you to contribute to any open source project on GitHub. You can [explore repositories on GitHub](https://github.com/trending) and contribute to any that interest you. We welcome contributions to any of our open source documentation projects: [Openlib.cs](https://github.com/acmbpdc/openlib.cs), [Truffle](https://github.com/acmbpdc/Truffle).
+This was a simple example. But doing it yourself prepares you to contribute to any open source project on GitHub. You can [explore repositories on GitHub](https://github.com/trending) and contribute to any that interest you. We welcome contributions to any of ACM's open source documentation projects: [Openlib.cs](https://github.com/acmbpdc/openlib.cs), [Truffle](https://github.com/acmbpdc/Truffle).
 
 We have some helpful tips and workflows below for your reference.
 
@@ -497,3 +499,13 @@ Enter the following in the file:
 </details>
 
 Use this referral link to get access quickly! [https://gh.io/acm-pilani](https://gh.io/acm-pilani). And start enjoying the benefits!
+
+## Resources
+
+- [Official Git Documentation](https://git-scm.com/doc)
+- [Learn Git Branching](https://learngitbranching.js.org/) - Interactive lesson which visualises branches and commits
+- [Understanding Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) - An intuitive markup language used to format text
+- [Need help - Fast!](https://ohshitgit.com/)
+- [Git for Beginners](https://www.youtube.com/watch?v=8JJ101D3knE)
+
+And stay tuned for Git Guide's launch - a comprehensive guide to Git and GitHub!
