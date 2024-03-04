@@ -111,7 +111,7 @@ Files inside a `git` repository are of two types:
 - **Untracked**: These files are the new files that you add into your repository, that git still haven't started tracking. 
 - **Tracked**: These files are the ones' that git is already keeping track of. These files could either be:
 
-    - **modified**: This means that we have made changes into the tracked file, but it has not yet been staged or commited. Git won't notice these files until we *stage* these files. Note that even if you had used `git add` on this file earlier, it will return to the modified state if you make changes to it.
+    - **modified**: This means that we have made changes into the tracked file, but it has not yet been staged or committed. Git won't notice these files until we *stage* these files. Note that even if you had used `git add` on this file earlier, it will return to the modified state if you make changes to it.
     - **staged/tracked**: These are *modified* files which are ready to be committed (*added into the next snapshot of the repository*). 
     - **committed**: The changes of these files are stored into the `git` repository, after the snapshot is taken.
 
@@ -432,7 +432,7 @@ A quick way to get started with basic git.
 ### Best Practices for Git
 
 - **Don't make small commits**: You really don't have to make a commit every time you make a change in a file. 
-- **Don't make huge commits**: Rather than commiting the entire project at once, it's the best to commit every time you hit a checkpoint (**eg:** *Implements a function for your OOPs Project*)
+- **Don't make huge commits**: Rather than committing the entire project at once, it's the best to commit every time you hit a checkpoint (**eg:** *Implements a function for your OOPs Project*)
 - **Write Proper Commit Messages**: When writing a commit message, make sure to write meaningful commit messages (*rather than just* "Update file1")
 
 ## Contribution Workflow
