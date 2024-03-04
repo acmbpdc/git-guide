@@ -506,6 +506,7 @@ Use this referral link to get access quickly! [https://gh.io/acm-pilani](https:/
 - [Learn Git Branching](https://learngitbranching.js.org/) - Interactive lesson which visualises branches and commits
 - [Understanding Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) - An intuitive markup language used to format text
 - [Need help - Fast!](https://ohshitgit.com/)
+- [Git for Beginners (recommended)](https://www.youtube.com/watch?v=apGV9Kg7ics)
 - [Git for Beginners](https://www.youtube.com/watch?v=8JJ101D3knE)
 
 And stay tuned for Git Guide's launch - a comprehensive guide to Git and GitHub!
