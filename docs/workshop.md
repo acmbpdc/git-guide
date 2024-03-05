@@ -472,6 +472,12 @@ There's no substitute for hands-on experience. But for most students, real world
 
 There are a few steps we need to complete before we can apply for the pack. Follow the links below and complete the steps to access 100's of amazing resources and tools for free including GitHub Pro, GitHub CoPilot AI, AWS, Azure credits, free domains, several free trials and so much more! As an added benefit grab an extra sticker for applying for the pack!
 
+- [If you don't have a GitHub account](https://github.com/signup)
+
+- [If you already have a GitHub account but it is not linked to your college email](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/adding-an-email-address-to-your-github-account)
+
+**If your GitHub account exists and is linked to your college email you can go ahead with the below steps**. To skip forward - This is the referral link to get access quickly! [https://gh.io/acm-pilani](https://gh.io/acm-pilani) below are a few steps that ensure you get access quickly.
+
 - [Update your location information, ensure you press save](https://github.com/settings/billing/payment_information)
 - [Ensure your college mail has been verified](https://github.com/settings/emails)
 - [Enable 2FA and activate it](https://github.com/settings/security)
