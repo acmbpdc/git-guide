@@ -470,7 +470,7 @@ A quick reference for working with distributed repositories.
 
 There's no substitute for hands-on experience. But for most students, real world tools can be cost-prohibitive. That's why GitHub created the [GitHub Student Developer Pack.](https://gh.io/acm-pilani)
 
-There are a few steps we need to complete before we can apply for the pack. Follow the links below and complete the steps to access 100's of amazing resources and tools for free including GitHub Pro, GitHub CoPilot AI, AWS, Azure credits, free domains, several free trials and so much more! As an added benefit grab an extra sticker for applying for the pack!
+There are a few steps we need to complete before we can apply for the pack. Follow the links below and complete the steps to access 100's of amazing resources and tools for free including GitHub Pro, GitHub CoPilot AI, Digital Ocean, Azure credits, free domains, several free trials and so much more! As an added benefit grab an extra sticker for applying for the pack!
 
 - [If you don't have a GitHub account](https://github.com/signup)
 
