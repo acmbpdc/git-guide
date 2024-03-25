@@ -1,11 +1,16 @@
 # Git and GitHub
 
 <center>
-This is the documentation for a workshop supported by 
+This is the archived documentation for a workshop supported by 
 
 <a href="https://education.github.com/experts"><img src="/assets/workshop/gce_bg.jpg" style="display:block; height:30px;"></img></a>
 
 [GCE](https://education.github.com/experts) is a global program by GitHub that looks to serve communities around the globe and support their student leaders. This session has been funded by GitHub so enjoy the pizzas, stickers and fun session!
+
+<img src="/assets/workshop/groupphoto.jpg" style="width:75%"></img>
+
+*Hello World!*
+
 </center>
 
 ## What is Git?
