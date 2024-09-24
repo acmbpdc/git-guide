@@ -481,10 +481,10 @@ There are a few steps we need to complete before we can apply for the pack. Foll
 
 - [If you already have a GitHub account but it is not linked to your college email](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/adding-an-email-address-to-your-github-account)
 
-**If your GitHub account exists and is linked to your college email you can go ahead with the below steps**. To skip forward - This is the referral link to get access quickly! [https://gh.io/acm-pilani](https://gh.io/acm-pilani) below are a few steps that ensure you get access quickly.
+**If your GitHub account exists and is linked to your college email you can go ahead with the below steps**. To skip forward - This is the referral link to get access quickly! [https://gh.io/acmhack24](https://gh.io/acmhack24) below are a few steps that ensure you get access quickly.
 
 - [Update your location information, ensure you press save](https://github.com/settings/billing/payment_information)
-- [Ensure your college mail has been verified](https://github.com/settings/emails)
+- [Ensure your college mail has been verified](https://github.com/settings/emails). Use the college name - "Birla Institute of Technology and Science, Pilani"
 - [Enable 2FA and activate it](https://github.com/settings/security)
 - [Customise your GitHub profile](https://github.com/settings/profile)
 - [Add a profile README, you should see a prompt for the same](https://github.com)
@@ -509,7 +509,7 @@ Enter the following in the file:
 </pre>
 </details>
 
-Use this referral link to get access quickly! [https://gh.io/acm-pilani](https://gh.io/acm-pilani). And start enjoying the benefits!
+Use this referral link to get access quickly! [https://gh.io/acmhack24](https://gh.io/acmhack24). And start enjoying the benefits!
 
 ## Resources
 
