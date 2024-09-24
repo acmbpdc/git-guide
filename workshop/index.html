@@ -1,0 +1,1544 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A Detailed Guide for Beginners and Techies to learn all about Git and GitHub in a fun and practical manner.">
+      
+      
+        <meta name="author" content="ACM BPDC">
+      
+      
+        <link rel="canonical" href="https://gitguide.acmbpdc.org/workshop/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.36">
+    
+    
+      
+        <title>Git & GitHub Workshop - Git Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.06209087.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#git-and-github" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Git Guide" class="md-header__button md-logo" aria-label="Git Guide" data-md-component="logo">
+      
+  <img src="../assets/ACM_Logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Git Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Git & GitHub Workshop
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/acmbpdc/git-guide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    acmbpdc/git-guide
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Git & GitHub Workshop
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Git Guide" class="md-nav__button md-logo" aria-label="Git Guide" data-md-component="logo">
+      
+  <img src="../assets/ACM_Logo.png" alt="logo">
+
+    </a>
+    Git Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/acmbpdc/git-guide" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    acmbpdc/git-guide
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Git & GitHub Workshop
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Git & GitHub Workshop
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Git?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is Git?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version Control
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#so-what-is-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      So what is GitHub?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Repository
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Basics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#init" class="md-nav__link">
+    <span class="md-ellipsis">
+      init
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    <span class="md-ellipsis">
+      add
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="add">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#staging-area" class="md-nav__link">
+    <span class="md-ellipsis">
+      Staging Area
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore" class="md-nav__link">
+    <span class="md-ellipsis">
+      restore
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      diff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log" class="md-nav__link">
+    <span class="md-ellipsis">
+      log
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branches
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Branches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-conflicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merge Conflicts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remotes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Remotes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-remotes-to-git-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Remotes to Git Repo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push" class="md-nav__link">
+    <span class="md-ellipsis">
+      push
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      clone
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull" class="md-nav__link">
+    <span class="md-ellipsis">
+      pull
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open Source
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Open Source">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull Requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-it-yourself-contribution-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do It Yourself - Contribution Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Git Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices-for-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Git
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contribution-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contribution Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contribution Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices-for-contributioncollaboration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Contribution/Collaboration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-student-developer-pack" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitHub Student Developer Pack
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Git?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is Git?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version Control
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#so-what-is-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      So what is GitHub?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Repository
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Basics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#init" class="md-nav__link">
+    <span class="md-ellipsis">
+      init
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    <span class="md-ellipsis">
+      add
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="add">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#staging-area" class="md-nav__link">
+    <span class="md-ellipsis">
+      Staging Area
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore" class="md-nav__link">
+    <span class="md-ellipsis">
+      restore
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diff" class="md-nav__link">
+    <span class="md-ellipsis">
+      diff
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log" class="md-nav__link">
+    <span class="md-ellipsis">
+      log
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Branches
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Branches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merge
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#merge-conflicts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Merge Conflicts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remotes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remotes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Remotes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-remotes-to-git-repo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding Remotes to Git Repo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push" class="md-nav__link">
+    <span class="md-ellipsis">
+      push
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clone" class="md-nav__link">
+    <span class="md-ellipsis">
+      clone
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull" class="md-nav__link">
+    <span class="md-ellipsis">
+      pull
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open Source
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Open Source">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#forks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pull-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pull Requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-it-yourself-contribution-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do It Yourself - Contribution Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Git Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Git Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices-for-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Git
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contribution-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contribution Workflow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contribution Workflow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices-for-contributioncollaboration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices for Contribution/Collaboration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-student-developer-pack" class="md-nav__link">
+    <span class="md-ellipsis">
+      GitHub Student Developer Pack
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resources
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="git-and-github">Git and GitHub<a class="headerlink" href="#git-and-github" title="Permanent link">&para;</a></h1>
+<p><center>
+This is the archived documentation for a workshop supported by </p>
+<p><a href="https://education.github.com/experts"><img src="/assets/workshop/gce_bg.jpg" style="display:block; height:30px;"></img></a></p>
+<p><a href="https://education.github.com/experts">GCE</a> is a global program by GitHub that looks to serve communities around the globe and support their student leaders. This session has been funded by GitHub so enjoy the pizzas, stickers and fun session!</p>
+<p><img src="/assets/workshop/groupphoto.jpg" style="width:75%"></img></p>
+<p><em>Hello World!</em></p>
+<p></center></p>
+<h2 id="what-is-git">What is Git?<a class="headerlink" href="#what-is-git" title="Permanent link">&para;</a></h2>
+<p>To define it technically, Git is a version control system created by Linus Torvalds in 2005 for development of the Linux kernel. Git is distributed, every directory on every computer has a working copy of the code with a complete history of changes and full version tracking capabilities.</p>
+<p>To define it in a more fun way, Git is a multidimensional time machine! It allows you to go back in time and see what your code looked like at a certain point in time. It also allows you to collaborate with others and work on the same codebase without stepping on each other's toes.</p>
+<p>But what is version control?</p>
+<h3 id="version-control">Version Control<a class="headerlink" href="#version-control" title="Permanent link">&para;</a></h3>
+<p>Let's say you are working on completing your Math-II Assignment, which requires you to write code to do some math stuff. As you keep writing your amazing code, you notice that you have to keep track of the code changes you write, so that you could come back to an old version if you mess up. As you might not be aware about VCS then, you decided to create multiple copies of your files (as shown below) to keep track of your changes.</p>
+<p>Now you are writing the report for this project, the same situation arises, but this time you can use Google Docs' version history feature to go back in time and get your report back. This is a great example of version control.</p>
+<p><center>
+<img src="/assets/workshop/without-vcs.png" style="width:45%"></img>
+<img src="/assets/workshop/gdocs.png" style="width:45%"></img>
+</center></p>
+<h2 id="so-what-is-github">So what is GitHub?<a class="headerlink" href="#so-what-is-github" title="Permanent link">&para;</a></h2>
+<p>Git is to GitHub like a car is to car parking, a video is to YouTube, a photo is to Instagram. GitHub is simply a platform built to store Git repositories (folders), which allows you to store your code in the cloud, collaborate with others, and track changes to your code.</p>
+<p>Over the years GitHub has become synonymous with developers, with so many new features added in, GitHub goes beyond simply hosting Git repositories. It has several other features such as collaboration, codespaces (Virtual Machines), web hosting, and much more.</p>
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<p>If you are using your local machine you can follow the instructions on <a href="https://git-scm.com/downloads">this page</a> to install git. There are a few more steps to get your account details setup, but for today we are going to use GitHub's web interface to get started.</p>
+<p>GitHub offers free access to a computer on the cloud, a feature known as GitHub codespaces. This is a great way to get started with coding and GitHub without having to install anything on your local machine. You can access it by clicking on the <code>.</code> key on any repository or selecting <code>Codespaces</code> on GitHub.</p>
+<p>You will need to have or create a GitHub account to use GitHub Codespaces. If you don't have one, you can create one <a href="https://github.com/signup">here</a>. Please use your college email which will be useful for next steps.</p>
+<p>Thanks to codespaces we will skip a lot of setup steps and get straight to the cool stuff. If you are referring this documentation later and need to setup git on your personal computers you can <a href="https://docs.github.com/en/get-started/getting-started-with-git/set-up-git">refer this</a>.</p>
+<h3 id="creating-a-repository">Creating a Repository<a class="headerlink" href="#creating-a-repository" title="Permanent link">&para;</a></h3>
+<p>A repository is a place where you can store your code. It is simply the equivalent of a directory/folder. Any folder can be made into a repository. For our purposes we will be using GitHub's web interface to create a repository, this automatically makes a folder for us!</p>
+<p><center>
+<a href="https://github.com/new">Create a new repository</a></p>
+<p><img src="/assets/workshop/newrepo.png" style="width:45%"></img>
+</center></p>
+<p>Now if you return to codespaces you can <a href="https://github.com/codespaces/new">create a new codespace</a>.</p>
+<p><center>
+<img src="/assets/workshop/newcodespace.png" style="width:45%"></img>
+</center></p>
+<p>And that's it! You are ready to start experimenting. This interface is a web version of the popular IDE (Integrated Development Environment) Visual Studio Code. You can write code, run it, and do everything you would do on your local machine. And since it is integrated by GitHub, there is no need for extra logins or authentication.</p>
+<p><br>
+<center>
+<strong>YOU DO NOT NEED A GITHUB ACCOUNT TO USE GIT!</strong>
+</center></p>
+<p>This is a common misconception. You can use git on your local machine without ever needing to create a GitHub account. However, if you want to collaborate with others, or store your code on GitHub, you will need a GitHub account. In our case, we are using GitHub's virtual machines (borrowing their laptop on your browser) so we want to use GitHub. </p>
+<p>You can now make use of the terminal on the bottom of the screen to work with git. You can navigate, create and edit files, folder by clicking on the directory on the left.</p>
+<h2 id="the-basics">The Basics<a class="headerlink" href="#the-basics" title="Permanent link">&para;</a></h2>
+<h3 id="init"><code>init</code><a class="headerlink" href="#init" title="Permanent link">&para;</a></h3>
+<p>To make any directory into a git repository, use the <code>init</code> command.</p>
+<pre><code class="language-sh">git init
+</code></pre>
+<p>You might see the <code>Reinitialized existing Git repository</code> message, this simply means that this folder is already a git repository. When we create a repository on GitHub it is already git <em>init-ed</em>.</p>
+<p>If you view hidden files, you can see a new folder called <code>.git</code> created. This is where git stores all the information that git needs to track your project (<em>you really don't have to know what any of the things inside this directory does, to use git</em>). </p>
+<h3 id="add"><code>add</code><a class="headerlink" href="#add" title="Permanent link">&para;</a></h3>
+<p>Once you are done writing code, let's start the next step of tracking our repository. </p>
+<p>Git has this special place allocated to review the changes you have in the files you have added, changed or deleted, called as the <strong>Staging Area</strong>. </p>
+<p>To add files into the staging area, use the <code>add</code> command.</p>
+<pre><code class="language-sh">git add file1
+</code></pre>
+<p>To add all the files in your repository (<em>recursively</em>), use <code>.</code> to indicate all files. Be careful while using this, as you might not always want to add all the files to your staging area.</p>
+<pre><code class="language-sh">git add .
+</code></pre>
+<h4 id="staging-area">Staging Area<a class="headerlink" href="#staging-area" title="Permanent link">&para;</a></h4>
+<p>The staging area contains all of the information about what files and changes are going into the next snapshot of the repository.</p>
+<p>Files inside a <code>git</code> repository are of two types:</p>
+<ul>
+<li><strong>Untracked</strong>: These files are the new files that you add into your repository, that git still haven't started tracking. </li>
+<li>
+<p><strong>Tracked</strong>: These files are the ones' that git is already keeping track of. These files could either be:</p>
+<ul>
+<li><strong>modified</strong>: This means that we have made changes into the tracked file, but it has not yet been staged or committed. Git won't notice these files until we <em>stage</em> these files. Note that even if you had used <code>git add</code> on this file earlier, it will return to the modified state if you make changes to it.</li>
+<li><strong>staged/tracked</strong>: These are <em>modified</em> files which are ready to be committed (<em>added into the next snapshot of the repository</em>). </li>
+<li><strong>committed</strong>: The changes of these files are stored into the <code>git</code> repository, after the snapshot is taken.</li>
+</ul>
+</li>
+</ul>
+<p>To understand the current file tracking statuses use</p>
+<pre><code class="language-sh">git status
+</code></pre>
+<p>Git status is a very useful command to understand what is happening in your repository. It will tell you what files are untracked, modified, staged, and committed. As well as give you suggestions on commands that you can use.</p>
+<h3 id="restore"><code>restore</code><a class="headerlink" href="#restore" title="Permanent link">&para;</a></h3>
+<p>To remove files or directories from the staging area, use the <code>restore</code> command. This will bring it back to the untracked state.</p>
+<pre><code class="language-sh">git restore --staged file1
+</code></pre>
+<p>You can also <code>restore</code> command to discard all the <strong>unstaged</strong> local changes made to your files in your repository. This will bring the file back to the last committed state.</p>
+<pre><code class="language-sh">git restore .
+</code></pre>
+<p><code>restore</code> command is also used to restore a file to how it was in a previous commit.</p>
+<pre><code class="language-sh">git restore --source=HEAD file1
+</code></pre>
+<h3 id="commit"><code>commit</code><a class="headerlink" href="#commit" title="Permanent link">&para;</a></h3>
+<p>Once you are done reviewing the changes you want in the next snapshot of your repository, you are now ready to click that snapshot. </p>
+<p>To click save this state, use the <code>commit</code> command.</p>
+<pre><code class="language-sh">git commit -m &quot;My first commit!&quot;
+</code></pre>
+<p>You can also type a short commit message directly from this command, by using the <code>-m</code> flag. Or to write a more detailed message, just use <code>git commit</code>. This will open up a text editor where you can write a detailed message. It is recommended to write a detailed message, as it will help you understand what you did in the future.</p>
+<h3 id="diff"><code>diff</code><a class="headerlink" href="#diff" title="Permanent link">&para;</a></h3>
+<p>Sometimes, before you stage your code, you would want to inspect the changed code. To see the <em>difference</em> between the old and new versions of your file, use the <em>diff</em> command.</p>
+<pre><code class="language-sh">git diff
+</code></pre>
+<p>This command will only show you the changes made to unstaged files.</p>
+<p>To see the changes made in staged files, use <code>--staged</code> flag.</p>
+<pre><code class="language-sh">git diff --staged
+</code></pre>
+<h3 id="log"><code>log</code><a class="headerlink" href="#log" title="Permanent link">&para;</a></h3>
+<p>To inspect the history of the commits made in a <code>git</code> repository, use the <code>log</code> command.</p>
+<pre><code class="language-sh">git log
+</code></pre>
+<p>You would be seeing an output as shown below</p>
+<pre><code class="language-sh">commit 227fbdb4ef3a05b2df0dfdc4fbea61e2d13af044 (HEAD -&gt; main)
+Author: The Real Thanos &lt;thanos.cool@email.com&gt;
+Date:   Thu Nov 25 00:11:14 2021 +0400
+
+    Collect Power Stone
+</code></pre>
+<p>The huge string that you see along with <code>commit</code> is a commit's number. It is a 40-character hexadecimal string, which uniquely identifies a commit.</p>
+<p><strong>main</strong>: This refers to the final <em>branch</em> in your git repository (<em>More about branches discussed later in this documentation</em>). </p>
+<p><strong>HEAD</strong>: This refers to the current branch pointed by git.</p>
+<p><strong>origin</strong>: This refers to the remote repository that you have set. (<em>More about remotes discussed later in this documentation</em>). </p>
+<p>To see the <code>log</code> in a concise manner, use the <code>--oneline</code> flag.</p>
+<pre><code class="language-sh">git log --oneline
+</code></pre>
+<h3 id="branches">Branches<a class="headerlink" href="#branches" title="Permanent link">&para;</a></h3>
+<p>What if you are working as a Software Development Engineer at Google, on their Maps Application, and you had to develop a feature to find the time taken by a kite to follow the directions to a location? Would you directly make changes to the deployed application, to implement your feature? Or would you try to play it safe and make sure your feature is all good, before you add it to the deployed application?</p>
+<p>You might probably choose the second option. That is where <em>branches</em> come in!</p>
+<p><strong>Branching</strong> allows you to create a copy (<em>branch</em>) of your current working directory, and make changes (<em>commits</em>) to this copy, without disturbing anything else.</p>
+<div align="center">
+    <img src="/assets/workshop/git-branch.png">
+</div>
+<p></br></p>
+<p>The <em>default</em> branch that git creates for you, when a new repository is created (<code>init</code>) is called <strong>main</strong>.</p>
+<p>To <strong>see all the branches</strong> in your repository, use the <code>branch</code> command</p>
+<pre><code class="language-sh">git branch
+</code></pre>
+<p>To <strong>create a new branch</strong>, add the new branch name along with <code>branch</code> command.</p>
+<pre><code class="language-sh">git branch kite-feature
+</code></pre>
+<p>To <strong>switch to different branch</strong>, use the <code>checkout</code> command.</p>
+<pre><code class="language-sh">git checkout kite-feature
+</code></pre>
+<p>To <strong>create a branch and switch the branch at the same time</strong>, use the <code>-b</code> flag along with <code>checkout</code> command.</p>
+<pre><code class="language-sh">git checkout -b kite-feature
+</code></pre>
+<p>To <strong>delete a branch</strong>, use the <code>-d</code> flag along with <code>branch</code> command.</p>
+<pre><code class="language-sh">git branch -d kite-feature
+</code></pre>
+<h4 id="merge">Merge<a class="headerlink" href="#merge" title="Permanent link">&para;</a></h4>
+<p>To <strong>merge</strong> the changes between branches, use the <code>merge</code> command.</p>
+<pre><code class="language-sh">git merge from_which_branch_to_merge_from
+</code></pre>
+<div align="center">
+    <img src="/assets/workshop/git-merge.png">
+</div>
+<p></br></p>
+<h4 id="merge-conflicts">Merge Conflicts<a class="headerlink" href="#merge-conflicts" title="Permanent link">&para;</a></h4>
+<p>Merge Conflict is the problem that occur when Git is unable to automatically merge branches (<em>or commits</em>).</p>
+<p>When merging a branch, where all changes occur on different lines or in different files, Git will automatically be able to merge them.</p>
+<p>A conflict occurs when the changes made occur on the same line, as Git won't be able to figure out which change to keep, and which change to discard.</p>
+<p>You can make use of GUI features inbuilt to VSCode and other editors to help resolve these.</p>
+<p>There are a lot more awesome commands and features in Git, you can refer the basics on your cheatsheet. Find great <a href="#resources">resources attached</a>.</p>
+<h3 id="remotes">Remotes<a class="headerlink" href="#remotes" title="Permanent link">&para;</a></h3>
+<p>A remote repository in Git, also called a remote, is a Git repository that’s hosted on the Internet or another network. (<em>It's basically like how you could host your pictures or folders on Google Drive</em>)</p>
+<p>This is where <strong>GitHub</strong> really comes into picture! Few other popular examples of remotes are <strong>BitBucket</strong> and <strong>GitLab</strong>.</p>
+<details><summary>For Local Machines</summary><pre>
+To set up your GitHub user with your `git`, add your GitHub username to `config`.
+
+
+<pre><code class="language-sh">git config --global user.name &quot;HalfTheWorldSlayer&quot;
+</code></pre>
+
+
+To save your password for later, enter the following command
+
+
+<pre><code class="language-sh">git config --global credential.helper store
+</code></pre>
+
+</pre></details>
+
+<h4 id="adding-remotes-to-git-repo">Adding Remotes to Git Repo<a class="headerlink" href="#adding-remotes-to-git-repo" title="Permanent link">&para;</a></h4>
+<details><summary>For Local Machines</summary><pre>
+To add a remote to a repository that you have in your local system, use the `remote` command. 
+You can get the remote url from GitHub itself by clicking on the `Code` button and copying the url.
+When you create a blank repository on GitHub you will get a list of initiation commands, you can use those to get started locally.
+
+
+<pre><code class="language-sh">git remote add origin {remote_url}
+</code></pre>
+
+</pre></details>
+
+<p>In our case we have the remote already set up for us, so we don't have to worry about this. You can check this with</p>
+<pre><code class="language-sh">git remote -v
+git remote get-url origin
+</code></pre>
+<p><code>origin</code> as mentioned in the command, is the name we are calling for the remote we just added. We can set the name to be anything as we please. Origin is merely the convention used by most developers.</p>
+<h4 id="push"><code>push</code><a class="headerlink" href="#push" title="Permanent link">&para;</a></h4>
+<p>To update the commits you made on your local system or even GitHub's VM codespaces, to your remote (<em>GitHub</em>), use the <code>push</code> command.</p>
+<pre><code class="language-sh">git push origin main
+</code></pre>
+<p>While pushing a new <code>feature</code> branch onto remote, <code>-u</code> should be used. This will set the upstream branch for the feature branch. (create the branch on the central remote repository)</p>
+<pre><code class="language-sh">git push -u origin kite-feature
+</code></pre>
+<p>To delete a branch from the remote, use the <code>--delete</code> flag.</p>
+<pre><code class="language-sh">git push --delete origin kite-feature
+</code></pre>
+<p>Until you use <code>git push</code> no changes will be synced with your repository on GitHub. Till then everything remains local. Ensure you have completed your work before you push so any other viewers can make sense of your code.</p>
+<h4 id="clone"><code>clone</code><a class="headerlink" href="#clone" title="Permanent link">&para;</a></h4>
+<p>To <em>clone</em> a repository which is hosted on a remote, use the <code>clone</code> command.</p>
+<pre><code class="language-sh">git clone {repo_url}
+</code></pre>
+<p>We cannot use it now because we are already in a repository. But if you want to try it out, you can do it on your own machines. This command is commonly used to access code on the internet or even to access your own repository that you might have created on GitHub first.</p>
+<h4 id="pull"><code>pull</code><a class="headerlink" href="#pull" title="Permanent link">&para;</a></h4>
+<p>To retrieve the changes made in the remote, but not in the local, use the <code>pull</code> command. We would use this command when we are working on a project with multiple people, and we want to get the latest changes made by others that they have pushed to the remote.</p>
+<pre><code class="language-sh">git pull origin main
+</code></pre>
+<p>(<em>This command is used instead of using <code>fetch</code> and <code>merge</code>, as it fetches the changes and updates the local as well.</em>)</p>
+<h2 id="open-source">Open Source<a class="headerlink" href="#open-source" title="Permanent link">&para;</a></h2>
+<p>Imagine you're baking a cake with your friends. Open source is like sharing your cake recipe with everyone and inviting them to help bake it together. 🎂</p>
+<p>GitHub is where you share your recipe (code) with others. People can see your recipe, suggest improvements, or even bake their own version of the cake! 🍰</p>
+<p>So, in simple terms, open source on GitHub means sharing your code with others, collaborating together, and making cool stuff for everyone to enjoy! 🚀</p>
+<h3 id="forks">Forks<a class="headerlink" href="#forks" title="Permanent link">&para;</a></h3>
+<p>A way of creating a copy of a given repository, so that it belongs to our user. This let's you work on a copy of any code that you see on <em>GitHub</em>. </p>
+<div align="center">
+    <img src="/assets/workshop/fork.png">
+</div>
+<p></br></p>
+<h3 id="pull-requests">Pull Requests<a class="headerlink" href="#pull-requests" title="Permanent link">&para;</a></h3>
+<p>A commit or series of commits that you send to the owner of a repository, so that they incorporate your code commits into their actual tree.</p>
+<h3 id="do-it-yourself-contribution-workflow">Do It Yourself - Contribution Workflow<a class="headerlink" href="#do-it-yourself-contribution-workflow" title="Permanent link">&para;</a></h3>
+<p><em>Win a sticker for your first contribution! IRL and on your profile!</em></p>
+<ul>
+<li>
+<p><strong>Step 1</strong>
+<br>Create a fork of the <a href="https://github.com/acmbpdc/learning-open-source">repository we setup for you to learn</a>.</p>
+</li>
+<li>
+<p><strong>Step 2</strong>
+<br>Open the forked repository in GitHub codespaces. You can find your fork on your GitHub profile, repositories tab: https://github.com/{YOUR USERNAME HERE}?tab=repositories. Open the forked repository and press the <code>.</code> button to open in codespaces. Alternatively you can open a <a href="https://github.com/codespaces/new">new codespaces instance</a> and select the forked repository.</p>
+</li>
+</ul>
+<details><summary>For local machines</summary><pre>If you have your own laptops you should `git clone` and work on the repository locally.</pre></details>
+
+<ul>
+<li>
+<p><strong>Step 3</strong>
+<br>Follow the steps given in the README, create and checkout a new branch in your clone to start working on the code you want to add.</p>
+</li>
+<li>
+<p><strong>Step 4</strong> 
+<br>Add the file into that branch naming it with the format provided.</p>
+</li>
+<li>
+<p><strong>Step 5</strong> 
+<br>Once done making changes, add and commit the changes.</p>
+</li>
+<li>
+<p><strong>Step 6</strong> 
+<br>Once all the commits are made, you can now <code>push</code> the changes to your fork, in the remote.</p>
+</li>
+<li>
+<p><strong>Step 7</strong> 
+<br>You can now create a pull request from your fork, on your remote (<em>GitHub</em>), onto the actual repository. Open the fork url on GitHub and click on the <code>Pull Requests</code> tab and then <code>New Pull Request</code>. You may also use the prompt on screen:</p>
+<ul>
+<li>Click on <code>Compare &amp; pull request</code>.</li>
+<li>Create a pull request.</li>
+<li>Once the maintainer of the repository reviews your code, they'll merge your code into their repository.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><strong>YAY!</strong> <em>You just made your first contribution!</em> 🎉</p>
+<p>This was a simple example. But doing it yourself prepares you to contribute to any open source project on GitHub. You can <a href="https://github.com/trending">explore repositories on GitHub</a> and contribute to any that interest you. We welcome contributions to any of ACM's open source documentation projects: <a href="https://github.com/acmbpdc/openlib.cs">Openlib.cs</a>, <a href="https://github.com/acmbpdc/Truffle">Truffle</a>.</p>
+<p>We have some helpful tips and workflows below for your reference.</p>
+<h2 id="git-workflow">Git Workflow<a class="headerlink" href="#git-workflow" title="Permanent link">&para;</a></h2>
+<p>A quick way to get started with basic git.</p>
+<p><strong>Step 1</strong>: You start off by creating a git repository (<code>init</code>).</p>
+<p><strong>Step 2</strong>: Write all the code you need into this repository (<code>code</code>).</p>
+<p><strong>Step 3</strong>: Once you are done writing/editing code, we add the new/changed files into a special place called as the <em>staging area</em> (<code>add</code>).</p>
+<p><strong>Step 4</strong>: Once you review your changes, you will now take a snapshot of the repository (<code>commit</code>).</p>
+<p><strong>Step 5</strong>: If you have new changes to make into your repository, continue the workflow from <em>step 2</em>.</p>
+<h3 id="best-practices-for-git">Best Practices for Git<a class="headerlink" href="#best-practices-for-git" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Don't make small commits</strong>: You really don't have to make a commit every time you make a change in a file. </li>
+<li><strong>Don't make huge commits</strong>: Rather than committing the entire project at once, it's the best to commit every time you hit a checkpoint (<strong>eg:</strong> <em>Implements a function for your OOPs Project</em>)</li>
+<li><strong>Write Proper Commit Messages</strong>: When writing a commit message, make sure to write meaningful commit messages (<em>rather than just</em> "Update file1")</li>
+</ul>
+<h2 id="contribution-workflow">Contribution Workflow<a class="headerlink" href="#contribution-workflow" title="Permanent link">&para;</a></h2>
+<p>A quick reference for working with distributed repositories.</p>
+<p><strong>Step 1</strong>: Create a fork of the repository that you want to work on.</p>
+<p><strong>Step 2</strong>: Clone the fork into your local system.</p>
+<p><strong>Step 3:</strong> You could create a new branch in your clone to start working on the code you want to add.</p>
+<p><strong>Step 4:</strong> Make all the changes you want into that branch.</p>
+<p><strong>Step 5:</strong> Once done making changes, commit the changes.</p>
+<p><strong>Step 6:</strong> Once all the commits are made, you can now <code>push</code> the changes into your fork, in the remote.</p>
+<p><strong>Step 7:</strong> You can now create a pull request from your fork, on your remote (<em>GitHub</em>), onto the actual repository.</p>
+<h3 id="best-practices-for-contributioncollaboration">Best Practices for Contribution/Collaboration<a class="headerlink" href="#best-practices-for-contributioncollaboration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Always synchronize your branches before starting any work on your own.</li>
+<li>Avoid having very large changes that modify a lot of different things.</li>
+<li>When working on a big change, it makes sense to have a separate feature branch.</li>
+<li>Regularly merge changes made on the main branch back onto the feature branch.</li>
+<li>Have the latest version of the project in the main branch, and the stable version of the project on a separate branch.</li>
+<li>Having good commit message is important.</li>
+</ul>
+<h2 id="github-student-developer-pack">GitHub Student Developer Pack<a class="headerlink" href="#github-student-developer-pack" title="Permanent link">&para;</a></h2>
+<p><center>
+<img src="/assets/workshop/backpack.png" style="width:45%">
+</center></p>
+<p>There's no substitute for hands-on experience. But for most students, real world tools can be cost-prohibitive. That's why GitHub created the <a href="https://gh.io/acm-pilani">GitHub Student Developer Pack.</a></p>
+<p>There are a few steps we need to complete before we can apply for the pack. Follow the links below and complete the steps to access 100's of amazing resources and tools for free including GitHub Pro, GitHub CoPilot AI, Digital Ocean, Azure credits, free domains, several free trials and so much more! As an added benefit grab an extra sticker for applying for the pack!</p>
+<ul>
+<li>
+<p><a href="https://github.com/signup">If you don't have a GitHub account</a></p>
+</li>
+<li>
+<p><a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/adding-an-email-address-to-your-github-account">If you already have a GitHub account but it is not linked to your college email</a></p>
+</li>
+</ul>
+<p><strong>If your GitHub account exists and is linked to your college email you can go ahead with the below steps</strong>. To skip forward - This is the referral link to get access quickly! <a href="https://gh.io/acmhack24">https://gh.io/acmhack24</a> below are a few steps that ensure you get access quickly.</p>
+<ul>
+<li><a href="https://github.com/settings/billing/payment_information">Update your location information, ensure you press save</a></li>
+<li><a href="https://github.com/settings/emails">Ensure your college mail has been verified</a>. Use the college name - "Birla Institute of Technology and Science, Pilani"</li>
+<li><a href="https://github.com/settings/security">Enable 2FA and activate it</a></li>
+<li><a href="https://github.com/settings/profile">Customise your GitHub profile</a></li>
+<li><a href="https://github.com">Add a profile README, you should see a prompt for the same</a></li>
+</ul>
+<p><img src="/assets/workshop/rme.png"></img></p>
+<details><summary>If you don't see the highlighted prompt</summary>
+<pre>
+- Go to [New Repository](https://github.com/new)
+- Set the repository name same as your username (you will see a message telling you this is a special repository)
+- Add a README file
+Enter the following in the file:
+
+<pre><code class="language-md">- 👋 Hi, I’m @USERNAME
+- 👀 I’m interested in ...
+- 🌱 I’m currently learning ...
+- 💞️ I’m looking to collaborate on ...
+- 📫 How to reach me ...
+- 😄 Pronouns: ...
+- ⚡ Fun fact: ...
+</code></pre>
+
+</pre>
+</details>
+
+<p>Use this referral link to get access quickly! <a href="https://gh.io/acmhack24">https://gh.io/acmhack24</a>. And start enjoying the benefits!</p>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://git-scm.com/doc">Official Git Documentation</a></li>
+<li><a href="https://learngitbranching.js.org/">Learn Git Branching</a> - Interactive lesson which visualises branches and commits</li>
+<li><a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">Understanding Markdown</a> - An intuitive markup language used to format text</li>
+<li><a href="https://ohshitgit.com/">Need help - Fast!</a></li>
+<li><a href="https://www.youtube.com/watch?v=apGV9Kg7ics">Git for Beginners (recommended)</a></li>
+<li><a href="https://www.youtube.com/watch?v=8JJ101D3knE">Git for Beginners</a></li>
+</ul>
+<p>And stay tuned for Git Guide's launch - a comprehensive guide to Git and GitHub!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 - ACM BITS Pilani Dubai Campus
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://instagram.com/acmbpdc" target="_blank" rel="noopener" title="instagram.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141m0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7m146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8m76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/acmbpdc" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.gg/DYQdxquYwP" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485 485 0 0 0 404.081 32.03a1.82 1.82 0 0 0-1.923.91 338 338 0 0 0-14.9 30.6 447.9 447.9 0 0 0-134.426 0 310 310 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.7 483.7 0 0 0-119.688 37.107 1.7 1.7 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.02 2.02 0 0 0 .765 1.375 487.7 487.7 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348 348 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321 321 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251 251 0 0 0 9.109-7.137 1.82 1.82 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.81 1.81 0 0 1 1.924.233 235 235 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.4 301.4 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391 391 0 0 0 30.014 48.815 1.86 1.86 0 0 0 2.063.7A486 486 0 0 0 610.7 405.729a1.88 1.88 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541M222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241m195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "header.autohide"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>
